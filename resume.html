@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Dhruv Tejani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-web: #f1f5f9;
+      --bg-resume: #ffffff;
+      --text-main: #1e293b;
+      --text-sub: #475569;
+      --text-muted: #64748b;
+      --accent: #0f766e;
+      --accent-light: #f0fdfa;
+      --border: #e2e8f0;
+      
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-web);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+
+    /* Print Controller Bar */
+    .print-bar {
+      max-width: 800px;
+      margin: 0 auto 1.5rem auto;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+    }
+
+    .print-info {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+    }
+
+    .print-btn {
+      font-family: var(--font-heading);
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      transition: background-color 0.2s;
+    }
+
+    .print-btn:hover {
+      background-color: #0d5c56;
+    }
+
+    /* Resume Document Wrapper (Simulated A4) */
+    .resume-page {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--bg-resume);
+      padding: 3rem;
+      box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1);
+      border-radius: 4px;
+      position: relative;
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .name {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .contact-item a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .about-text {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      text-align: justify;
+    }
+
+    /* Grid Layout for Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .skill-category {
+      font-size: 0.85rem;
+    }
+
+    .skill-category-title {
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .skill-list {
+      color: var(--text-sub);
+    }
+
+    /* Timeline Items (Experience, Education) */
+    .item {
+      margin-bottom: 1.2rem;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .item-title {
+      color: var(--text-main);
+    }
+
+    .item-date {
+      color: var(--accent);
+      font-size: 0.85rem;
+    }
+
+    .item-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    .item-details {
+      list-style-type: square;
+      padding-left: 1.2rem;
+      font-size: 0.85rem;
+      color: var(--text-sub);
+    }
+
+    .item-details li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Certifications Grid */
+    .certs-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-sub);
+    }
+
+    .cert-item {
+      background: var(--accent-light);
+      border: 1px solid rgba(15, 118, 110, 0.1);
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+    }
+
+    .cert-name {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .cert-org {
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Projects in Resume */
+    .resume-projects {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .proj-item {
+      font-size: 0.85rem;
+    }
+
+    .proj-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .proj-desc {
+      color: var(--text-sub);
+      margin-top: 0.2rem;
+    }
+
+    .proj-tech {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Print Media Query */
+    @media print {
+      body {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 0;
+      }
+
+      .print-bar {
+        display: none;
+      }
+
+      .resume-page {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar shown on web view only -->
+  <div class="print-bar">
+    <div class="print-info">
+      <strong>Dhruv Tejani Resume</strong> &bull; Print-friendly styling is configured for A4 paper.
+    </div>
+    <button class="print-btn" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <!-- Resume Page Content -->
+  <div class="resume-page">
+    
+    <!-- Header -->
+    <header class="header">
+      <h1 class="name">Dhruv Tejani</h1>
+      <div class="title">Software Developer | Python, Java &amp; MERN Stack Specialist</div>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <a href="mailto:dhruvtejani30@gmail.com">dhruvtejani30@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <a href="tel:8320496146">8320496146</a>
+        </div>
+        <div class="contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <a href="https://github.com" target="_blank">github.com</a>
+        </div>
+        <div class="contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <a href="https://www.linkedin.com/in/dhruv-tejani-379653378?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">linkedin.com/in/dhruv-tejani-379653378</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="about-text">
+        Detail-oriented Software Developer specializing in Python, Java, MERN Stack, Full-Stack Web Development, and Machine Learning applications. Experienced in designing, developing, and deploying complete web platforms, relational/NoSQL database-driven solutions, secure REST APIs, and data science diagnostic workflows. Focuses on building scalable and performance-optimized products that solve real-world problems.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-title">Languages &amp; Databases</div>
+          <div class="skill-list">Python, Java, JavaScript, HTML5, CSS3, SQL, C, MongoDB, PostgreSQL, MySQL, SQLite</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">Frameworks &amp; Tools</div>
+          <div class="skill-list">React.js, Django, Node.js, Express.js, Bootstrap, Tailwind CSS, Git, GitHub, VS Code, Postman, Linux</div>
+        </div>
+        <div class="skill-category" style="grid-column: span 2; margin-top: 0.5rem;">
+          <div class="skill-category-title">Machine Learning &amp; Analytics</div>
+          <div class="skill-list">Exploratory Data Analysis (EDA), Scikit-Learn, Pandas, NumPy, Data Visualization (Matplotlib, Seaborn)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Software Developer</span>
+          <span class="item-date">Active Practice</span>
+        </div>
+        <div class="item-subtitle">Full-Stack Development &amp; Platform Architectures</div>
+        <ul class="item-details">
+          <li>Developed full-stack web applications and built backend REST APIs using Python, Java, Node.js, and Django.</li>
+          <li>Designed responsive, browser-compatible user interfaces with modern frontend technologies and CSS grids/flexbox layouts.</li>
+          <li>Engineered SQL and NoSQL database structures, executing optimized queries across PostgreSQL, MySQL, and MongoDB.</li>
+          <li>Deployed live production platforms, configuring domain associations, security protocols, and web server hostings.</li>
+          <li>Collaborated on architectural design, wireframing, and custom solutions targeting client business goals.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section">
+      <h2 class="section-title">Key Projects</h2>
+      <div class="resume-projects">
+        <div class="proj-item">
+          <div class="proj-name">
+            <span>Varunaat (varunaat.in)</span>
+            <a href="https://varunaat.in" target="_blank" style="color: var(--accent); text-decoration: underline; font-size: 0.8rem;">Live Platform</a>
+          </div>
+          <p class="proj-desc">Designed, developed, and deployed the complete web application for Varuna Aerotech, a DGCA-certified drone inspection and aerial data intelligence platform. Features 48-hour report turnaround pipelines, IEC 62446-3:2022 compliant solar thermal/EL analytics, and turbine erosion diagnostic widgets.</p>
+          <div class="proj-tech">React.js, Node.js, Express.js, PostgreSQL, GIS Mapping, REST APIs</div>
+        </div>
+        
+        <div class="proj-item">
+          <div class="proj-name">
+            <span>Job Portal Web Application</span>
+            <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">Independent</span>
+          </div>
+          <p class="proj-desc">Built a full-stack job matching platform connecting recruiters with candidates. Created dashboards, candidate profiles, application tracking pipelines, and job filter functions.</p>
+          <div class="proj-tech">React.js, Django, PostgreSQL, REST APIs</div>
+        </div>
+
+        <div class="proj-item">
+          <div class="proj-name">
+            <span>Investment and Transaction Management System</span>
+            <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">Academic</span>
+          </div>
+          <p class="proj-desc">Created a desktop-based financial system managing client portfolios, cash logs, yield summaries, and interest calculations backed by a relational database schema.</p>
+          <div class="proj-tech">Java, JDBC, MySQL, OOP principles</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <div class="certs-list">
+        <div class="cert-item">
+          <div class="cert-name">Exploratory Data Analysis for Machine Learning</div>
+          <div class="cert-org">IBM</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">HTML, CSS, and JavaScript for Web Developers</div>
+          <div class="cert-org">Johns Hopkins University</div>
+        </div>
+        <div class="cert-item" style="grid-column: span 2;">
+          <div class="cert-name">Inheritance and Data Structures in Java</div>
+          <div class="cert-org">University of Pennsylvania</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Bachelor of Engineering</span>
+          <span class="item-date">Graduated</span>
+        </div>
+        <div class="item-subtitle">LJ University &bull; SPI: 8.5 / 10</div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhruv Tejani | Software Developer | Python, Java, MERN Stack & Full-Stack</title>
+  <meta name="description" content="Professional portfolio of Dhruv Tejani, a Software Developer specializing in Python, Java, MERN Stack, and full-stack web development. Featured project: Varunaat.in drone inspection platform.">
+  <meta name="keywords" content="Dhruv Tejani, Software Developer, Python Developer, Java Developer, MERN Stack Developer, Full-Stack, Web Development, Varunaat, Portfolio">
+  <meta name="author" content="Dhruv Tejani">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Interactive Canvas Particle Field -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Background Decorative Blobs -->
+  <div class="decor-blob blob-1"></div>
+  <div class="decor-blob blob-2"></div>
+  <div class="decor-blob blob-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="header bg-blur" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        Dhruv Tejani<span class="logo-dot"></span>
+      </a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#featured-project" class="nav-link">Featured</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="resume.html" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Resume</a></li>
+        </ul>
+      </nav>
+      
+      <button class="nav-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="hero-greeting">Welcome to my space</div>
+        <h1 class="hero-name">Dhruv Tejani</h1>
+        <div class="hero-title-scroller"></div>
+        <p class="hero-description">
+          I am a Software Developer specializing in Python, Java, MERN Stack, and Machine Learning applications. From architecture design to production deployment, I handle the complete project lifecycle to solve real-world business challenges.
+        </p>
+        <div class="hero-ctas">
+          <a href="#featured-project" class="btn btn-primary">
+            View Work
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="assets/dhruv_tejani_resume.pdf" download="Dhruv_Tejani_Resume.pdf" class="btn btn-secondary">
+            Download Resume
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal" style="transition-delay: 0.2s;">
+        <div class="hero-glow-circle"></div>
+        <div class="hero-graphic-card">
+          <div class="card-header-mock">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="code-mock">
+            <p><span class="keyword">const</span> developer = {</p>
+            <p style="padding-left: 1.5rem;"><span class="variable">name</span>: <span class="string">'Dhruv Tejani'</span>,</p>
+            <p style="padding-left: 1.5rem;"><span class="variable">skills</span>: [<span class="string">'Python'</span>, <span class="string">'Java'</span>, <span class="string">'MERN'</span>, <span class="string">'Django'</span>],</p>
+            <p style="padding-left: 1.5rem;"><span class="variable">lifecycle</span>: <span class="string">'Dev to Deployment'</span>,</p>
+            <p style="padding-left: 1.5rem;"><span class="variable">focus</span>: <span class="string">'Scalability &amp; Security'</span></p>
+            <p>};</p>
+            <p class="comment" style="margin-top: 1rem;">// Passionate about solving real-world problems.</p>
+            <p class="keyword" style="margin-top: 0.5rem;">deploy<span style="color: var(--text-primary);">(developer);</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-visual reveal">
+        <div class="about-card">
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number">8.5</div>
+              <div class="stat-label">Bachelor IT SPI</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Certifications</div>
+            </div>
+            <div class="stat-item" style="grid-column: span 2;">
+              <div class="stat-number">Full-Cycle</div>
+              <div class="stat-label">Dev &amp; Deployment Ownership</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-content reveal" style="transition-delay: 0.2s;">
+        <div class="section-subtitle">A Bit About Me</div>
+        <h2 class="section-title" style="margin-bottom: 2rem;">Full-Lifecycle Engineering</h2>
+        <div class="about-text">
+          <p>
+            I am a Software Developer specializing in <strong>Python, Java, MERN Stack</strong>, and <strong>Full-Stack Web Development</strong>, with a strong foundation in <strong>Machine Learning</strong> and data analytics. My experience includes architecting business websites, dynamic web applications, secure REST APIs, and database-driven solutions.
+          </p>
+          <p>
+            Rather than just writing code, I focus on creating scalable, secure, and user-friendly software that solves tangible business challenges. I handle the complete lifecycle of a project—from database schema design and backend logic to modern frontend implementation, domain management, and production-ready hosting/deployment.
+          </p>
+        </div>
+        
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="highlight-content">
+              <h4>Security &amp; Scalability</h4>
+              <p>Applications designed to remain stable under load and secure from vulnerabilities.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <div class="highlight-content">
+              <h4>Production-Ready Deployments</h4>
+              <p>Competent management of live servers, custom domains, and hosting configurations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Project (Varunaat) -->
+  <section class="section featured-project" id="featured-project">
+    <div class="container featured-grid">
+      <div class="featured-visual reveal">
+        <div class="featured-glow"></div>
+        <div class="featured-mockup-wrapper interactive-image-wrapper">
+          <img src="assets/varunaat_showcase.png" alt="Varunaat Drone Inspection" class="featured-mockup">
+          
+          <!-- Hotspots -->
+          <div class="hotspot-node" style="top: 30%; left: 35%;" data-tooltip="Thermal vision analytics: Processes raw infrared frame matrices in real-time.">
+            <span class="hotspot-pulse"></span>
+            <span class="hotspot-dot"></span>
+          </div>
+          <div class="hotspot-node" style="top: 25%; left: 74%;" data-tooltip="Blade diagnostics: Computer vision algorithms to inspect wind turbines.">
+            <span class="hotspot-pulse"></span>
+            <span class="hotspot-dot"></span>
+          </div>
+          <div class="hotspot-node" style="top: 75%; left: 45%;" data-tooltip="IEC 62446-3: Telemetry aggregation pipeline with spatial PostgreSQL triggers.">
+            <span class="hotspot-pulse"></span>
+            <span class="hotspot-dot"></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="featured-content reveal" style="transition-delay: 0.2s;">
+        <span class="featured-tag">Primary Featured Project</span>
+        <h2 class="featured-title">Varunaat</h2>
+        <p class="featured-description">
+          Designed, developed, and deployed the complete web application for **Varuna Aerotech** (varunaat.in), a DGCA-certified drone inspection and aerial data intelligence platform servicing India's solar, wind, and utility sectors.
+        </p>
+        
+        <ul class="featured-bullets">
+          <li><strong>IEC 62446-3:2022 Compliant Reports:</strong> Developed automated reporting tools that generate bankable data analyses, supporting EL (electroluminescence), thermal thermography, and IV curve metrics for solar plants.</li>
+          <li><strong>48-Hour Pipeline:</strong> Engineered high-performance backend processing APIs to digest massive flight data sets and generate diagnostic reports with an SLA of under 48 hours.</li>
+          <li><strong>Multi-Domain Diagnostic Workflows:</strong> Programmed dashboards for solar hotspot localization, wind turbine blade crack tracking, and powerline corona discharge monitoring.</li>
+        </ul>
+        
+        <div class="featured-tech">
+          <span class="tech-tag">React.js</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express.js</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">GIS Mapping</span>
+          <span class="tech-tag">Thermal Data Processing</span>
+        </div>
+        
+        <div class="hero-ctas">
+          <a href="https://varunaat.in" target="_blank" class="btn btn-primary">
+            Visit Live Website
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container reveal">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Technical Competence</span>
+        <h2 class="section-title">My Skill Set</h2>
+      </div>
+      
+      <div class="skills-container">
+        <!-- Tabs Header -->
+        <div class="skills-tabs">
+          <button class="skills-tab-btn active" data-category="languages">Languages</button>
+          <button class="skills-tab-btn" data-category="frontend">Frontend</button>
+          <button class="skills-tab-btn" data-category="backend">Backend</button>
+          <button class="skills-tab-btn" data-category="databases">Databases</button>
+          <button class="skills-tab-btn" data-category="tools">Tools</button>
+          <button class="skills-tab-btn" data-category="machine-learning">Machine Learning</button>
+        </div>
+        
+        <!-- Tab Panels -->
+        <!-- Languages -->
+        <div class="skills-panel active" id="skills-languages">
+          <div class="skill-card">
+            <div class="skill-icon">🐍</div>
+            <span class="skill-name">Python</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">☕</div>
+            <span class="skill-name">Java</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">JS</div>
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <span class="skill-name">HTML5</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <span class="skill-name">CSS3</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">💾</div>
+            <span class="skill-name">SQL</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">⚙️</div>
+            <span class="skill-name">C</span>
+          </div>
+        </div>
+        
+        <!-- Frontend -->
+        <div class="skills-panel" id="skills-frontend">
+          <div class="skill-card">
+            <div class="skill-icon">⚛️</div>
+            <span class="skill-name">React.js</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <span class="skill-name">HTML5</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <span class="skill-name">CSS3</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">JS</div>
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🅱️</div>
+            <span class="skill-name">Bootstrap</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🌀</div>
+            <span class="skill-name">Tailwind CSS</span>
+          </div>
+        </div>
+        
+        <!-- Backend -->
+        <div class="skills-panel" id="skills-backend">
+          <div class="skill-card">
+            <div class="skill-icon">🟢</div>
+            <span class="skill-name">Django</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🔗</div>
+            <span class="skill-name">Node.js</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🚀</div>
+            <span class="skill-name">Express.js</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">📡</div>
+            <span class="skill-name">REST APIs</span>
+          </div>
+        </div>
+        
+        <!-- Databases -->
+        <div class="skills-panel" id="skills-databases">
+          <div class="skill-card">
+            <div class="skill-icon">🍃</div>
+            <span class="skill-name">MongoDB</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🐘</div>
+            <span class="skill-name">PostgreSQL</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🐬</div>
+            <span class="skill-name">MySQL</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🗃️</div>
+            <span class="skill-name">SQLite</span>
+          </div>
+        </div>
+        
+        <!-- Tools -->
+        <div class="skills-panel" id="skills-tools">
+          <div class="skill-card">
+            <div class="skill-icon">🔧</div>
+            <span class="skill-name">Git</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🐙</div>
+            <span class="skill-name">GitHub</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">📝</div>
+            <span class="skill-name">VS Code</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">📬</div>
+            <span class="skill-name">Postman</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🐧</div>
+            <span class="skill-name">Linux</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🪐</div>
+            <span class="skill-name">Eclipse</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">💡</div>
+            <span class="skill-name">IntelliJ IDEA</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🧭</div>
+            <span class="skill-name">MongoDB Compass</span>
+          </div>
+        </div>
+        
+        <!-- Machine Learning -->
+        <div class="skills-panel" id="skills-machine-learning">
+          <div class="skill-card">
+            <div class="skill-icon">🤖</div>
+            <span class="skill-name">Machine Learning</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">📊</div>
+            <span class="skill-name">Exploratory Data Analysis (EDA)</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">📈</div>
+            <span class="skill-name">Pandas &amp; NumPy</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🔬</div>
+            <span class="skill-name">Scikit-Learn</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">📉</div>
+            <span class="skill-name">Data Visualization</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Interactive CLI Terminal emulator -->
+      <div class="terminal-wrapper reveal" style="margin-top: 5rem;">
+        <div class="terminal-header">
+          <div class="terminal-buttons">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal-title">dhruv@tejani-portfolio:~</div>
+        </div>
+        <div class="terminal-body" id="cli-terminal-body">
+          <div class="terminal-output" id="cli-terminal-output">
+            <p class="terminal-welcome">Dhruv Tejani Interactive Console (v1.0.0)</p>
+            <p class="terminal-welcome-sub">Type <span class="cmd-hl">help</span> to list available commands, or explore database profiles.</p>
+            <p>&nbsp;</p>
+          </div>
+          <div class="terminal-input-line">
+            <span class="terminal-prompt">guest@tejani-portfolio:~$</span>
+            <input type="text" id="cli-terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal Input">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Projects Section -->
+  <section class="section" id="projects">
+    <div class="container reveal">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">More Projects</span>
+        <h2 class="section-title">Other Work</h2>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- Project Card 1: Job Portal -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">💼</div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" class="project-link" aria-label="GitHub Repository">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Job Portal Web Application</h3>
+            <p class="project-description">
+              Developed a full-stack platform designed to bridge recruiters and job seekers. The portal provides robust search filters, profile editing, dynamic job posting dashboards, application tracking workflows, and secure session management.
+            </p>
+          </div>
+          
+          <div class="project-tech">
+            <span>React.js</span>
+            <span>Django</span>
+            <span>PostgreSQL</span>
+            <span>REST API</span>
+          </div>
+        </div>
+        
+        <!-- Project Card 2: Investment System -->
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">📈</div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" class="project-link" aria-label="GitHub Repository">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Investment &amp; Transaction Management</h3>
+            <p class="project-description">
+              A comprehensive standalone database application modeled for financial brokers and investors. It provides transaction recording, real-time investment logs, interest yield analysis, secure login logic, and structured SQL relational queries to generate PDF reports.
+            </p>
+          </div>
+          
+          <div class="project-tech">
+            <span>Java</span>
+            <span>MySQL</span>
+            <span>JDBC</span>
+            <span>OOP Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education / Timeline Section -->
+  <section class="section" id="experience">
+    <div class="container timeline-grid reveal">
+      <!-- Experience Column -->
+      <div class="timeline-column">
+        <h3>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan); display: inline-block; vertical-align: middle; margin-right: 0.5rem;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          Professional Experience
+        </h3>
+        
+        <div class="timeline-list">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">Active Practice</div>
+            <h4 class="timeline-title">Software Developer</h4>
+            <div class="timeline-subtitle">Independent Projects &amp; Platform Architectures</div>
+            <ul class="timeline-detail">
+              <li>Developed complex full-stack web applications, ensuring high accessibility and rapid client responsiveness.</li>
+              <li>Built and optimized secure backend REST APIs utilizing Django and Node.js.</li>
+              <li>Designed and maintained responsive, layout-fluid user interfaces across multiple form factors.</li>
+              <li>Engineered schema designs and executed performant indexing in databases such as PostgreSQL, MongoDB, and MySQL.</li>
+              <li>Deployed and managed production systems, overseeing domains, certificates, and web hosting architectures.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Education Column -->
+      <div class="timeline-column">
+        <h3>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan); display: inline-block; vertical-align: middle; margin-right: 0.5rem;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+          Education &amp; Credentials
+        </h3>
+        
+        <div class="timeline-list">
+          <!-- Degree -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">Engineering Degree</div>
+            <h4 class="timeline-title">Bachelor of Engineering</h4>
+            <div class="timeline-subtitle">LJ University</div>
+            <ul class="timeline-detail">
+              <li><strong>Academic Standing:</strong> Cumulative SPI of 8.5 / 10.</li>
+              <li>Acquired core theoretical knowledge in Algorithm Design, Object-Oriented Programming (Java/Python), Database Systems, and Network Infrastructures.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section" style="border-top: 1px solid var(--border-color);">
+    <div class="container reveal">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Verified Accomplishments</span>
+        <h2 class="section-title">Certifications</h2>
+      </div>
+      
+      <div class="certs-grid">
+        <!-- Cert 1 -->
+        <div class="cert-card">
+          <div class="cert-badge">📊</div>
+          <div>
+            <h3 class="cert-title">Exploratory Data Analysis for Machine Learning</h3>
+            <span class="cert-issuer">IBM</span>
+          </div>
+        </div>
+        
+        <!-- Cert 2 -->
+        <div class="cert-card">
+          <div class="cert-badge">💻</div>
+          <div>
+            <h3 class="cert-title">HTML, CSS, and JavaScript for Web Developers</h3>
+            <span class="cert-issuer">Johns Hopkins University</span>
+          </div>
+        </div>
+        
+        <!-- Cert 3 -->
+        <div class="cert-card">
+          <div class="cert-badge">🏗️</div>
+          <div>
+            <h3 class="cert-title">Inheritance and Data Structures in Java</h3>
+            <span class="cert-issuer">University of Pennsylvania</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact" style="background: radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.05) 0%, transparent 50%); border-top: 1px solid var(--border-color);">
+    <div class="container contact-grid reveal">
+      
+      <!-- Contact Info -->
+      <div class="contact-info-wrapper">
+        <div class="contact-intro">
+          <div class="section-subtitle">Let's Connect</div>
+          <h3>Start a Project</h3>
+          <p>
+            Have a project in mind, need a full-stack engineer to lead development, or want to discuss deployment architectures? Reach out, and let's build something secure and scalable.
+          </p>
+        </div>
+        
+        <div class="contact-details">
+          <!-- Email -->
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-item-text">
+              <span>Email Me</span>
+              <a href="mailto:dhruvtejani30@gmail.com">dhruvtejani30@gmail.com</a>
+            </div>
+          </div>
+          
+          <!-- Phone -->
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="contact-item-text">
+              <span>Call Me</span>
+              <a href="tel:8320496146">8320496146</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Social Profiles -->
+        <div class="contact-socials">
+          <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/dhruv-tejani-379653378?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-link" aria-label="LinkedIn Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper">
+        <form id="portfolio-contact-form" action="#" method="POST">
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" class="form-control" placeholder="john@example.com" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="form-message" class="form-label">Message Details</label>
+            <textarea id="form-message" class="form-control" placeholder="Tell me about your project, timeline, or requirements..." required></textarea>
+          </div>
+
+          <!-- Security Verification Challenge -->
+          <div class="form-group">
+            <label for="form-security" class="form-label">Security Verification: <span id="security-question-label">5 + 3 = ?</span></label>
+            <input type="text" id="form-security" class="form-control" placeholder="Type your answer here..." required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          
+          <!-- Mock submission loading & status container -->
+          <div id="form-status-container" class="form-status"></div>
+          
+          <!-- Security Scan Logging Output -->
+          <div id="security-scan-log" class="security-scan-log"></div>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <button class="scroll-top-btn" aria-label="Back to Top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+      </button>
+      <div class="footer-text">
+        &copy; 2026 Dhruv Tejani. All Rights Reserved. Built with performance, accessibility, and clean code in mind.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
