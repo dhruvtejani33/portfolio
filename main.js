@@ -536,7 +536,7 @@ function initTerminalEmulator() {
         responseText = `Email    : dhruvtejani30@gmail.com
 Phone    : +91 8320496146
 LinkedIn : linkedin.com/in/dhruv-tejani-379653378
-GitHub   : github.com`;
+GitHub   : github.com/dhruvtejani33`;
       } else if (command === 'about') {
         responseText = `Dhruv Tejani - Software Developer specializing in Python, Java, MERN Stack, and Machine Learning. Focuses on secure, scalable applications from development to deployment.`;
       } else if (command === 'clear') {
