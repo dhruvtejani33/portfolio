@@ -35,6 +35,7 @@ function initNavbar() {
   navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active');
     navLinksContainer.classList.toggle('active');
+    document.body.classList.toggle('nav-open');
   });
 
   navLinks.forEach(link => {
@@ -44,6 +45,7 @@ function initNavbar() {
       
       navToggle.classList.remove('active');
       navLinksContainer.classList.remove('active');
+      document.body.classList.remove('nav-open');
       
       const targetId = link.getAttribute('href');
       const targetElement = document.querySelector(targetId);
