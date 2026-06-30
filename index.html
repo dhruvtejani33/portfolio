@@ -37,7 +37,7 @@
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#featured-project" class="nav-link">Featured</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#projects" class="nav-link">My Work</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
           <li><a href="resume.html" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Resume</a></li>
@@ -413,16 +413,209 @@
     </div>
   </section>
 
-  <!-- Other Projects Section -->
+  <!-- My Work / Projects Section -->
   <section class="section" id="projects">
     <div class="container reveal">
       <div class="section-title-wrapper">
-        <span class="section-subtitle">More Projects</span>
-        <h2 class="section-title">Other Work</h2>
+        <span class="section-subtitle">Production Applications &amp; Projects</span>
+        <h2 class="section-title">My Work</h2>
+        <p class="section-description">End-to-end systems I designed, built, and deployed — from database schema to production hosting.</p>
       </div>
       
       <div class="projects-grid">
-        <!-- Project Card 1: Job Portal -->
+
+        <!-- Project Card: Vyayavid -->
+        <div class="project-card project-card--production">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">💰</div>
+              <div class="project-links">
+                <a href="https://vyayvid.varunaat.in" target="_blank" class="project-link project-link--live" aria-label="Visit Live Website" title="Live">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-name-hindi">व्ययविद्</div>
+            <h3 class="project-title">Vyayavid — On-Field Expense Manager</h3>
+            <div class="project-status-badge">
+              <span class="status-dot"></span> Live in Production
+            </div>
+            <p class="project-description">
+              A full-stack, mobile-first SaaS expense management platform for field teams. Features role-based access (Admin/Manager/Employee), real-time sync via SSE, Cloudflare R2 cloud bill storage, OTP authentication with brute-force lockout, and one-tap PDF/Excel report exports — all updating live across devices.
+            </p>
+          </div>
+          <div class="project-tech">
+            <span>Next.js 16</span>
+            <span>TypeScript</span>
+            <span>MongoDB</span>
+            <span>NextAuth.js</span>
+            <span>Cloudflare R2</span>
+            <span>SSE</span>
+            <span>Recharts</span>
+          </div>
+        </div>
+
+        <!-- Project Card: Niyamak -->
+        <div class="project-card project-card--production">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">🚁</div>
+              <div class="project-links">
+                <span class="project-link project-link--private" title="Enterprise — Private Access">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-name-hindi">नियामक</div>
+            <h3 class="project-title">Niyamak — Drone Operations ERP</h3>
+            <div class="project-status-badge">
+              <span class="status-dot"></span> Live in Production
+            </div>
+            <p class="project-description">
+              An enterprise-grade platform managing the complete lifecycle of commercial drone-survey operations — CRM sales pipeline, project lifecycle with gated status flow, intelligent pilot/drone scheduling with live SQL-based conflict detection and PostgreSQL advisory locks, cost estimation engine, asset management, and an installable PWA with offline support and 5-theme system.
+            </p>
+          </div>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Vite</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>PostgreSQL</span>
+            <span>Socket.IO</span>
+            <span>PWA</span>
+            <span>AWS EC2</span>
+          </div>
+        </div>
+
+        <!-- Project Card: Pratibimb -->
+        <div class="project-card project-card--production">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">🛩️</div>
+              <div class="project-links">
+                <span class="project-link project-link--private" title="Enterprise — Private Access">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-name-hindi">प्रतिबिम्ब:</div>
+            <h3 class="project-title">Pratibimb — Drone Inspection Tracker</h3>
+            <div class="project-status-badge">
+              <span class="status-dot"></span> Live in Production
+            </div>
+            <p class="project-description">
+              A multi-app Drone-as-a-Service SaaS platform (Admin, Pilot, Client portals) tracking 885+ power-line towers in real time. Features tower status state machine (pending → captured → uploaded), KML→map geospatial pipeline, Socket.IO WebSocket updates, Cloudinary photo uploads, daily/cumulative progress charts, and completion-date forecasting.
+            </p>
+          </div>
+          <div class="project-tech">
+            <span>React 18</span>
+            <span>Vite</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>Socket.IO</span>
+            <span>Leaflet</span>
+            <span>Recharts</span>
+          </div>
+        </div>
+
+        <!-- Project Card: Sarjanam -->
+        <div class="project-card project-card--production">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">🗺️</div>
+              <div class="project-links">
+                <a href="https://kml-generator-lilac.vercel.app" target="_blank" class="project-link project-link--live" aria-label="Visit Live Website" title="Live">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/Divyang9099/kml-generator" target="_blank" class="project-link" aria-label="GitHub Repository">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-name-hindi">सर्जनम्</div>
+            <h3 class="project-title">Sarjanam — Power Line Tower Export Tool</h3>
+            <div class="project-status-badge">
+              <span class="status-dot"></span> Live on Vercel
+            </div>
+            <p class="project-description">
+              A React + Vercel web app that queries OpenStreetMap for power transmission line towers, renders them on an interactive multi-layer map, and lets you select a tower range to export as KML/CSV files. Features custom way-stitching algorithm, Haversine distance calculation, CORS proxy with 5-mirror rotation, and real-time range preview.
+            </p>
+          </div>
+          <div class="project-tech">
+            <span>React 18</span>
+            <span>Vite</span>
+            <span>Leaflet.js</span>
+            <span>Overpass API</span>
+            <span>Vercel Serverless</span>
+            <span>KML/CSV</span>
+          </div>
+        </div>
+
+        <!-- Project Card: Vinyasah -->
+        <div class="project-card project-card--production">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">📂</div>
+              <div class="project-links">
+                <a href="https://vinyasah.vercel.app" target="_blank" class="project-link project-link--live" aria-label="Visit Live Website" title="Live">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/Divyang9099/AerioSort" target="_blank" class="project-link" aria-label="GitHub Repository">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-name-hindi">विन्यास</div>
+            <h3 class="project-title">Vinyasah — Drone Image Sorter</h3>
+            <div class="project-status-badge">
+              <span class="status-dot"></span> Live on Vercel
+            </div>
+            <p class="project-description">
+              A 100% client-side React app for power-line inspection teams to sort thousands of drone images (100+ GB) into structured tower/component folders. Features GPS-EXIF map-based sorting, KML/KMZ overlays, drag-and-drop with rubber-band multi-select, customizable export templates, and direct-to-disk streaming export via the File System Access API.
+            </p>
+          </div>
+          <div class="project-tech">
+            <span>React 18</span>
+            <span>Vite</span>
+            <span>Leaflet</span>
+            <span>EXIF</span>
+            <span>File System API</span>
+            <span>IndexedDB</span>
+          </div>
+        </div>
+
+        <!-- Project Card: Drone Geo Inspector -->
+        <div class="project-card project-card--production">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">🌐</div>
+              <div class="project-links">
+                <a href="https://drone-geo-inspector-part2.vercel.app/" target="_blank" class="project-link project-link--live" aria-label="Visit Live Website" title="Live">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-name-hindi">निरीक्षकः</div>
+            <h3 class="project-title">Drone Geo Inspector</h3>
+            <div class="project-status-badge">
+              <span class="status-dot"></span> Live on Vercel
+            </div>
+            <p class="project-description">
+              A browser-based geospatial tool that extracts GPS EXIF data from drone survey photos and plots them on an interactive map with clustering, flight-path reconstruction, thermal/visual filtering, KML overlays, and a live HD power-infrastructure vector-tile layer (MapLibre GL). Runs 100% in the browser — no server, no data upload.
+            </p>
+          </div>
+          <div class="project-tech">
+            <span>React 19</span>
+            <span>TypeScript</span>
+            <span>Leaflet</span>
+            <span>MapLibre GL</span>
+            <span>Zustand</span>
+            <span>Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Project Card: Job Portal -->
         <div class="project-card">
           <div>
             <div class="project-header">
@@ -435,10 +628,9 @@
             </div>
             <h3 class="project-title">Job Portal Web Application</h3>
             <p class="project-description">
-              Developed a full-stack platform designed to bridge recruiters and job seekers. The portal provides robust search filters, profile editing, dynamic job posting dashboards, application tracking workflows, and secure session management.
+              A full-stack platform bridging recruiters and job seekers with robust search filters, profile editing, dynamic job posting dashboards, application tracking workflows, and secure session management.
             </p>
           </div>
-          
           <div class="project-tech">
             <span>React.js</span>
             <span>Django</span>
@@ -447,7 +639,7 @@
           </div>
         </div>
         
-        <!-- Project Card 2: Investment System -->
+        <!-- Project Card: Investment System -->
         <div class="project-card">
           <div>
             <div class="project-header">
@@ -460,10 +652,9 @@
             </div>
             <h3 class="project-title">Investment &amp; Transaction Management</h3>
             <p class="project-description">
-              A comprehensive standalone database application modeled for financial brokers and investors. It provides transaction recording, real-time investment logs, interest yield analysis, secure login logic, and structured SQL relational queries to generate PDF reports.
+              A comprehensive standalone database application for financial brokers and investors with transaction recording, real-time investment logs, interest yield analysis, secure login logic, and structured SQL queries to generate PDF reports.
             </p>
           </div>
-          
           <div class="project-tech">
             <span>Java</span>
             <span>MySQL</span>
@@ -471,6 +662,7 @@
             <span>OOP Design</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
